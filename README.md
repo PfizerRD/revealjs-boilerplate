@@ -5,7 +5,7 @@ quicly create a RevealJS presentation.
 ## Getting started
 `docker-compose up --build -d`
 Open web browser to
-[http://localhost:3000](http://localhost:3000)
+[http://localhost](http://localhost)
 
 ## Customize
 Only the index.html file needs to be edited to customize the final presentation.
