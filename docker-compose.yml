@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+
+  revealjs:
+    image: revealjs
+    container_name: revealjs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
