@@ -8,7 +8,19 @@ Open web browser to
 [http://localhost](http://localhost)
 
 ## Customize
-Only the index.html file needs to be edited to customize the final presentation.
+Minimal changes:
+- index:
+  - title
+  - div class="slides"
+customizing the container
+- docker-compose.override.yml
+  - image name
+  - container name
+  - exposed port
+- more advanced changes
+  - add in-line SCRIPT to index
+  - favicon.img
+  - add JS function to main.js
 
 ## License
 MIT
