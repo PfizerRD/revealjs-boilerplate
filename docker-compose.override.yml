@@ -5,4 +5,4 @@ services:
     image: mypresentation
     container_name: mypresentation
     ports:
-      - "5001:5000"
+      - "80:5000"
