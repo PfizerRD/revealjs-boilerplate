@@ -7,5 +7,4 @@ COPY package.json /app/
 RUN npm install
 RUN npm install -g vite
 
-#CMD ["/bin/bash", "-c", "sleep 1000"]
 ENTRYPOINT ["vite", "--host"]
