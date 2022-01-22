@@ -3,6 +3,10 @@ import 'reveal.js/dist/reveal.css'
 import 'reveal.js/dist/theme/white.css'
 import 'reveal.js-plugins/customcontrols/style.css'
 import Reveal from 'reveal.js'
+import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm'
+import RevealNotes from 'reveal.js/plugin/notes/plugin'
+import RevealHighlight from 'reveal.js/plugin/highlight/plugin'
+import RevealMenu from 'reveal.js-menu/plugin'
 
 const deck = new Reveal()
 

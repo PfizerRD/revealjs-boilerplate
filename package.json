@@ -11,7 +11,8 @@
     "vite": "^2.7.2"
   },
   "dependencies": {
+    "reveal.js-menu": "^2.1.0",
     "reveal.js-plugins": "^4.1.5",
-    "reveal.js-menu": "^2.1.0"
+    "reveal_external": "^1.3.0"
   }
 }
