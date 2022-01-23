@@ -5,110 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
-		<link rel="stylesheet" href="node_modules/reveal.js/dist/theme/league.css">
-		<link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
+    <link rel="stylesheet" href="node_modules/reveal.js-plugins/chalkboard/style.css">
+    <link rel="stylesheet" href="node_modules/reveal.js-plugins/customcontrols/style.css">
+		<link rel="stylesheet" href="node_modules/reveal.js/dist/theme/pfizer.css" id="theme">
     <title>AMC Group</title>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-external="src/index.html">
-        </section>
-        <section>
-          <h2>Automation Modelling and Control Slide Template</h2>
-        </section>
-        <section>
-          <h1>This slide deck provides a boiler plate to get started.</h1>
-          <ul>
-            <li>All of the setup is done. Simply add work between the <em>div class="slides"</em>.</li>
-            <li>The menus, page numbering, chalkboard, ...etc. Are automatically included and ready.</li>
-            <li>The following sections provide simple starter cases to start.</li>
-            <li>There are <b>a lot more</b> plugins for this framework. Add them, and send a pull
-              request. I will review and merge</li>
-            <li>HTML5 will provide nearly any interaction you want:</li>
-              <ul>
-                <li>Text, images, audio, video.</li>
-                <li>Interactive 3D graphics (e.g. video games).</li>
-                <li>Connection with other instruments.</li>
-                <li>Direct connection with the client video cam and microphone (e.g. Zoom).</li>
-              </ul>
-          </ul>
-        </section>
-        <section data-markdown>
-          # test
-        </section>
-        <section>
-          <h2>Image example</h2>
-          <p>Prefer to use SVG graphics when possible</p>
-          <p>Inkscape is a great tool for making SVG images.</p>
-          <img src="flux-capacitor.svg" width="200px" height="200px"/>
-        </section>
-        <section>
-          <h2>Notes example</h2>
-          <aside class="notes">
-            Press <em>S</em> to open notes slide. If the window does not
-            open check if the browser is blocking the pop-up.
-          </aside>
-        </section>
-        <section data-transition="fade-in fade-out">
-          <section data-auto-animate>
-            <h1>Auto-Animate Example</h1>
-            <ul>
-              <li>The auto-animate should fullfill most of the animation needs.</li>
-              <li>For more complicated animations, we will use other libraries and frameworks.</li>
-              <ul style="margin-left: -1000px">
-                <li>ImpressJS</li>
-                <li>Spectacle</li>
-                <li>ReactJS</li>
-                <li>AngularJS</li>
-                <li>Blender</li>
-              </ul>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h1 style="margin-top: 100px; color: red;">Auto-Animate</h1>
-            <ul>
-              <li>The auto-animate should fullfill most of the animation needs.</li>
-              <li>For more complicated animations, we will use other libraries and frameworks.</li>
-              <ul style="margin-left: 0px">
-                <li>ImpressJS</li>
-                <li>Spectacle</li>
-                <li>ReactJS</li>
-                <li>AngularJS</li>
-                <li>Blender</li>
-              </ul>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h1><em>iframe</em> is a convenient way to combine web applications</h1>
-            <ul>
-              <li>Incorporate one presentation into another seemlesly for the user.</li>
-              <li>Incorporate a web app directly into you presentation, for a live demo within.</li>
-              <li>Use the iframe as a live background (see the Reveal pages).</li>
-            </ul>
-            <p>For example, click down to see this presentation inside itself.</p>
-          </section>
-          <section>
-            <iframe src="http://localhost:3000" style="width: 80vw; height: 80vh; margin-top: 100px"></iframe>
-          </section>
-        </section>
-        <section>
-          <h1>Create custom Javascript code, or write a socket call and create a presentation web app!</h1>
-          <button onClick="speak()" style="width: 100px; height: 50px;">Click Me!</button>
-          <script>
-            function speak() {
-              let synth = window.speechSynthesis;
-              let voices = synth.getVoices();
-              console.log(voices);
-              let text = "With the extensive JS, CSS and HTML libraries and framworks to help simplify their creation, "
-                          + "just about anything is possible. H T M L 5 Rocks!"
-              let utterance = new SpeechSynthesisUtterance(text);
-              utterance.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
-              synth.speak(utterance);
-            }
-          </script>
+        <section data-external-replace="src/index.html">
         </section>
       </div>
     </div>
@@ -116,26 +21,85 @@
 		<script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
 		<script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
 		<script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="node_modules/reveal.js-menu/menu.js"></script>
+    <script src="node_modules/reveal.js-plugins/chalkboard/plugin.js"></script>
+    <script src="node_modules/reveal.js-plugins/customcontrols/plugin.js"></script>
+    <script src="node_modules/reveal.js-plugins/audio-slideshow/plugin.js"></script>
+    <script src="node_modules/reveal.js-plugins/audio-slideshow/recorder.js"></script>
+    <script src="node_modules/reveal.js-plugins/audio-slideshow/RecordRTC.js"></script>
 		<script>
 			Reveal.initialize({
 				hash: true,
-				plugins: [
+        slideNumer: true,
+        plugins: [
           RevealMarkdown,
           RevealHighlight,
-          RevealNotes 
+          RevealNotes,
+          RevealMenu,
+          RevealChalkboard,
+          RevealCustomControls,
+          RevealAudioSlideshow,
+          RevealAudioRecorder
         ],
         dependencies: [
-//					{ src: 'plugin/markdown/marked.js' },
-//					{ src: 'plugin/markdown/markdown.js' },
-//					{ src: 'plugin/notes/notes.js', async: true },
-//					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{
-						src: 'node_modules/reveal_external/external/external.js',
-						condition: function() {
-							return !!document.querySelector( '[data-external],[data-external-replace]' );
-					  }
-					}
-				]
+  //					{ src: 'plugin/markdown/marked.js' },
+  //					{ src: 'plugin/markdown/markdown.js' },
+  //					{ src: 'plugin/notes/notes.js', async: true },
+  //					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          {
+            src: 'node_modules/reveal_external/external/external.js',
+            condition: function() {
+              return !!document.querySelector( '[data-external],[data-external-replace]' );
+            }
+          }
+        ],
+        menu: {
+          themes: [
+            {name: "beige", theme: "node_modules/reveal.js/dist/theme/beige.css"},
+            {name: "black", theme: "node_modules/reveal.js/dist/theme/black.css"},
+            {name: "blood", theme: "node_modules/reveal.js/dist/theme/blood.css"},
+            {name: "league", theme: "node_modules/reveal.js/dist/theme/league.css"},
+            {name: "moon", theme: "node_modules/reveal.js/dist/theme/moon.css"},
+            {name: "night", theme: "node_modules/reveal.js/dist/theme/night.css"},
+            {name: "pfizer", theme: "src/css/pfizer.css"},
+            {name: "serif", theme: "node_modules/reveal.js/dist/theme/serif.css"},
+            {name: "simple", theme: "node_modules/reveal.js/dist/theme/simple.css"},
+            {name: "sky", theme: "node_modules/reveal.js/dist/theme/sky.css"},
+            {name: "solarized", theme: "node_modules/reveal.js/dist/theme/solarized.css"},
+            {name: "white", theme: "node_modules/reveal.js/dist/theme/white.css"}
+          ],
+          themesPath: 'node_modules/reveal.js/dist/theme/',
+          transitions: true,
+          openOnInit: false
+        },
+        customcontrols: {
+          controls: [
+            {
+              id: 'toggle-overview',
+              title: 'Toggle overview (O)',
+              icon: '<i class="fa fa-th"></i>',
+              action: 'Reveal.toggleOverview();'
+            },
+            { icon: '<i class="fa fa-pen"></i>',
+              title: 'Toggle notes canvas (C)',
+              action: 'RevealChalkboard.toggleNotesCanvas();'
+            }
+          ]
+        },
+        audio: {
+          prefix: 'audio/', 	// audio files are stored in the "audio" folder
+          suffix: '.ogg',		// audio files have the ".ogg" ending
+          textToSpeechURL: null,  // the URL to the text to speech converter
+          defaultNotes: false, 	// use slide notes as default for the text to speech converter
+          defaultText: false, 	// use slide text as default for the text to speech converter
+          advance: -1, 		// advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+          autoplay: true,	// automatically start slideshow
+          defaultDuration: 5,	// default duration in seconds if no audio is available
+          defaultAudios: true,	// try to play audios with names such as audio/1.2.ogg
+          playerOpacity: 0.05,	// opacity value of audio player if unfocused
+          playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
+          startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+        }
 			});
 		</script>
 
