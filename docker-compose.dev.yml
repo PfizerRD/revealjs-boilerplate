@@ -14,11 +14,8 @@ services:
         source: ./index.html
         target: /app/index.html
       - type: bind
-        source: ./main.js
-        target: /app/main.js
-      - type: bind
         source: ./favicon.svg
         target: /app/favicon.svg
       - type: bind
-        source: ./public
-        target: /app/public
+        source: ./src
+        target: /app/src

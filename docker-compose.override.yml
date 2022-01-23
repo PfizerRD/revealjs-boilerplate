@@ -1,6 +1,0 @@
-version: '3.5'
-services:
-
-  revealjs:
-    image: mypresentation
-    container_name: mypresentation

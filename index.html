@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-		<link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="node_modules/reveal.js-plugins/chalkboard/style.css">
-    <link rel="stylesheet" href="node_modules/reveal.js-plugins/customcontrols/style.css">
-		<link rel="stylesheet" href="node_modules/reveal.js/dist/theme/pfizer.css" id="theme">
-    <title>AMC Group</title>
+		<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="/node_modules/reveal.js-plugins/chalkboard/style.css">
+    <link rel="stylesheet" href="/node_modules/reveal.js-plugins/customcontrols/style.css">
+    <link rel="stylesheet" href="/src/css/pfizer.css" id="theme">
+    <title>MACY Group</title>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-external-replace="src/index.html">
+        <section data-external-replace="/src/index.html">
         </section>
       </div>
     </div>
-		<script src="node_modules/reveal.js/dist/reveal.js"></script>
-		<script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
-		<script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
-		<script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
-		<script src="node_modules/reveal.js-menu/menu.js"></script>
-    <script src="node_modules/reveal.js-plugins/chalkboard/plugin.js"></script>
-    <script src="node_modules/reveal.js-plugins/customcontrols/plugin.js"></script>
-    <script src="node_modules/reveal.js-plugins/audio-slideshow/plugin.js"></script>
-    <script src="node_modules/reveal.js-plugins/audio-slideshow/recorder.js"></script>
-    <script src="node_modules/reveal.js-plugins/audio-slideshow/RecordRTC.js"></script>
+		<script src="/node_modules/reveal.js/dist/reveal.js"></script>
+		<script src="/node_modules/reveal.js/plugin/notes/notes.js"></script>
+		<script src="/node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="/node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="/node_modules/reveal.js-menu/menu.js"></script>
+    <script src="/node_modules/reveal.js-plugins/chalkboard/plugin.js"></script>
+    <script src="/node_modules/reveal.js-plugins/customcontrols/plugin.js"></script>
+    <script src="/node_modules/reveal.js-plugins/audio-slideshow/plugin.js"></script>
+    <script src="/node_modules/reveal.js-plugins/audio-slideshow/recorder.js"></script>
+    <script src="/node_modules/reveal.js-plugins/audio-slideshow/RecordRTC.js"></script>
 		<script>
 			Reveal.initialize({
 				hash: true,
@@ -47,7 +47,7 @@
   //					{ src: 'plugin/notes/notes.js', async: true },
   //					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
           {
-            src: 'node_modules/reveal_external/external/external.js',
+            src: '/node_modules/reveal_external/external/external.js',
             condition: function() {
               return !!document.querySelector( '[data-external],[data-external-replace]' );
             }
@@ -55,20 +55,20 @@
         ],
         menu: {
           themes: [
-            {name: "beige", theme: "node_modules/reveal.js/dist/theme/beige.css"},
-            {name: "black", theme: "node_modules/reveal.js/dist/theme/black.css"},
-            {name: "blood", theme: "node_modules/reveal.js/dist/theme/blood.css"},
-            {name: "league", theme: "node_modules/reveal.js/dist/theme/league.css"},
-            {name: "moon", theme: "node_modules/reveal.js/dist/theme/moon.css"},
-            {name: "night", theme: "node_modules/reveal.js/dist/theme/night.css"},
-            {name: "pfizer", theme: "src/css/pfizer.css"},
-            {name: "serif", theme: "node_modules/reveal.js/dist/theme/serif.css"},
-            {name: "simple", theme: "node_modules/reveal.js/dist/theme/simple.css"},
-            {name: "sky", theme: "node_modules/reveal.js/dist/theme/sky.css"},
-            {name: "solarized", theme: "node_modules/reveal.js/dist/theme/solarized.css"},
-            {name: "white", theme: "node_modules/reveal.js/dist/theme/white.css"}
+            {name: "beige", theme: "/node_modules/reveal.js/dist/theme/beige.css"},
+            {name: "black", theme: "/node_modules/reveal.js/dist/theme/black.css"},
+            {name: "blood", theme: "/node_modules/reveal.js/dist/theme/blood.css"},
+            {name: "league", theme: "/node_modules/reveal.js/dist/theme/league.css"},
+            {name: "moon", theme: "/node_modules/reveal.js/dist/theme/moon.css"},
+            {name: "night", theme: "/node_modules/reveal.js/dist/theme/night.css"},
+            {name: "pfizer", theme: "/src/css/pfizer.css"},
+            {name: "serif", theme: "/node_modules/reveal.js/dist/theme/serif.css"},
+            {name: "simple", theme: "/node_modules/reveal.js/dist/theme/simple.css"},
+            {name: "sky", theme: "/node_modules/reveal.js/dist/theme/sky.css"},
+            {name: "solarized", theme: "/node_modules/reveal.js/dist/theme/solarized.css"},
+            {name: "white", theme: "/node_modules/reveal.js/dist/theme/white.css"}
           ],
-          themesPath: 'node_modules/reveal.js/dist/theme/',
+          themesPath: '/node_modules/reveal.js/dist/theme/',
           transitions: true,
           openOnInit: false
         },
@@ -87,7 +87,7 @@
           ]
         },
         audio: {
-          prefix: 'audio/', 	// audio files are stored in the "audio" folder
+          prefix: '/src', 	// audio files are stored in the "audio" folder
           suffix: '.ogg',		// audio files have the ".ogg" ending
           textToSpeechURL: null,  // the URL to the text to speech converter
           defaultNotes: false, 	// use slide notes as default for the text to speech converter
@@ -95,7 +95,7 @@
           advance: -1, 		// advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
           autoplay: true,	// automatically start slideshow
           defaultDuration: 5,	// default duration in seconds if no audio is available
-          defaultAudios: true,	// try to play audios with names such as audio/1.2.ogg
+          defaultAudios: false,	// try to play audios with names such as audio/1.2.ogg
           playerOpacity: 0.05,	// opacity value of audio player if unfocused
           playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
           startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide

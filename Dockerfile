@@ -2,14 +2,10 @@ FROM node:16.13.1
 
 WORKDIR /app
 
-COPY package.json /app/
+COPY package.json index.html favicon.svg /app/
+COPY src/ /app/src
 
-RUN npm install
+RUN npm install\
+  && npm install -g vite
 
-COPY index.html main.js favicon.svg /app/
-COPY public ./public
-
-RUN npm run build\
-    && ln -s /app/node_modules dist
-
-ENTRYPOINT ["npx", "vite", "preview", "--host"]
+ENTRYPOINT ["vite", "--host"]
