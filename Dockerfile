@@ -9,7 +9,10 @@ RUN npm install\
   && npm run build
 
 FROM nginx
+
+WORKDIR /usr/share/nginx/html
+
 COPY ./app.conf /etc/nginx/conf.d/.
-COPY --from=builder /app/dist/ /usr/share/nginx/html/
-COPY --from=builder /app/src /usr/share/nginx/html/src
+COPY index.html /usr/share/nginx/html/index.html
+COPY src /usr/share/nginx/html/src
 COPY --from=builder /app/node_modules /usr/share/nginx/html/node_modules
